@@ -38,7 +38,9 @@ function log(str) {
 
  */
 
-// main object
+// main object - Object oriented JavaScript
+// using event delegation for handling user actions
+// using closures to control variable scope
 var Whack_a_mole = (function() {
 
     // private variables and functions
