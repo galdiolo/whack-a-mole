@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>whack-a-mole</title>
+
+    <!-- use Google Fonts for score display -->
+    <link href='http://fonts.googleapis.com/css?family=Orbitron&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!-- use http://necolas.github.io/normalize.css/ for improved cross-browser rendering -->
+    <link rel="stylesheet" href="assets/css/normalize.css" type="text/css" />
+
+    <!-- load css --->
+    <link rel="stylesheet" href="assets/css/base.css" type="text/css" />
+
+    <!-- fix for old Internet Explorer (inline-block not supported...) -->
+    <!--[if lt IE 8]>
+    <style>
+        .hole { display:inline; zoom:1; }
+    </style>
+    <![endif]-->
+</head>
+<body>
+<div id="container">
+    <h1>whack-a-mole</h1>
+
+    <!--
+
+     User code for custom settings
+
+     I imagined a user using "whack-a-mole" object in a site
+
+     For example: the user is adding an interface to change the settings for the number of "holes" and "rounds"
+
+     -->
+    <div id="myconfig">
+        <div><a href="#" id="switch">Show settings</a></div>
+        <div class="configurator">
+            <div>
+                <div class="label"><label for="holes_number">Holes:</label></div>
+                <div class="input"><select id="holes_number"></select></div>
+            </div>
+            <div>
+                <div class="label"><label for="rounds_number">Rounds:</label></div>
+                <div class="input"><select id="rounds_number"></select></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="grid"></div>
+</div>
+
+<!-- jQuery is required by "whack-a-mole" -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+<!-- "whack-a-mole" -->
+<script src="assets/js/whack-a-mole.js" type="text/javascript"></script>
+
+<!-- user javascript -->
+<script src="assets/js/user.js" type="text/javascript"></script>
+
+
+</body>
+</html>
