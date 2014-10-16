@@ -253,16 +253,16 @@ var Whack_a_mole = (function() {
 
         // creates DOM elements on the fly: http://api.jquery.com/jQuery/#jQuery2
         // add the "clicked" class to show the image "mole-clicked.png"
-        // assign the initial offset (the same of the clicked mole)
         // assign the width (the same of the clicked mole)
         // assign the height (the same of the clicked mole)
         // append the clicked mole to the HTML body (show it)
+        // assign the initial offset (the same of the clicked mole)
         var clickedMole$ =  $(config.mole_html)
                             .addClass("clicked")
-                            .offset(moleOffset)
                             .width(clickedMole.getHtml$().width())
                             .height(clickedMole.getHtml$().height())
-                            .appendTo("body");
+                            .appendTo("body")
+                            .offset(moleOffset);
 
         // after 250 milliseconds (so we can see the clicked mole)
         // move clicked mole to the score and remove it from DOM
