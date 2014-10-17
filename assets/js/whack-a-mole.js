@@ -3,19 +3,6 @@
  */
 
 
-// Returns a random integer between min (included) and max (excluded)
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
-
-
-// use console.log() if exists
-function log(str) {
-    if(window.console){
-        console.log(str);
-    }
-}
-
 /*
 
  Usage
@@ -38,7 +25,7 @@ function log(str) {
 
  */
 
-// main object - Object oriented JavaScript
+// Object oriented JavaScript
 // using event delegation for handling user actions
 // using closures to control variable scope
 var Whack_a_mole = (function() {
@@ -62,6 +49,19 @@ var Whack_a_mole = (function() {
     var running = false;
     var countdownSpeed = 500;
     var timer;
+
+    // Returns a random integer between min (included) and max (excluded)
+    var getRandomInt = function(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+
+    // use console.log() if exists
+    var log = function(str) {
+        if(window.console){
+            console.log(str);
+        }
+    }
 
     var init = function( settings ) {
 
@@ -257,6 +257,7 @@ var Whack_a_mole = (function() {
         // assign the height (the same of the clicked mole)
         // append the clicked mole to the HTML body (show it)
         // assign the initial offset (the same of the clicked mole)
+
         var clickedMole$ =  $(config.mole_html)
                             .addClass("clicked")
                             .width(clickedMole.getHtml$().width())
@@ -277,7 +278,7 @@ var Whack_a_mole = (function() {
                 if (running) {
                     display('<div class="partial">Score: ' + partialResult + ' <img src="assets/images/mole-clicked.png"></div>');
                 }
-                this.remove();
+                //this.remove();
             })},250);
 
 
