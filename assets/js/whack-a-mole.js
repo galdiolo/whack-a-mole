@@ -50,7 +50,7 @@ var Whack_a_mole = (function() {
     var countdownSpeed = 500;
     var timer;
 
-    // Returns a random integer between min (included) and max (excluded)
+    // Return a random integer between min (included) and max (excluded)
     var getRandomInt = function(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
     }
