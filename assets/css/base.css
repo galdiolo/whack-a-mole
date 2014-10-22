@@ -106,5 +106,5 @@ button[disabled] {
     background-repeat: no-repeat;
     visibility: visible;
     position: absolute;
-    z-index: -1; // low stack level to avoid covering clickable moles
+    z-index: -1; /* low stack level to avoid covering clickable moles */
 }
