@@ -1,9 +1,4 @@
 /*
- I choose to store some data to DOM elements for the purpose of event delegation, an alternative approach would be using HTML 5 custom data attributes, see http://www.w3.org/TR/html5/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes
- */
-
-
-/*
 
  Usage
 
